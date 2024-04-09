@@ -1,0 +1,64 @@
+version: "3.3"
+
+services:
+  db:
+    image: postgres:13.2
+    container_name: JKR_records_database
+    restart: always
+    volumes:
+      - ./database:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: jkr_records_db
+      POSTGRES_USER: jkr_records
+      POSTGRES_PASSWORD: jkr123
+    ports:
+      - 5432:5432
+
+  adminer:
+    container_name: jrkrecords_adminer
+    image: adminer:4.8.0
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: dockerfile
+    container_name: backend_jkr
+    volumes:
+      # Source code directory:
+      - type: bind
+        source: ./backend
+        target: /app/backend
+    ports:
+      - "8000:8000"
+    stdin_open: true
+    tty: true
+    # command: sh -c "cd /app/backend && python3 manage.py runserver 0.0.0.0:8000"
+
+  frontend:
+      build:
+        context: ./frontend/
+        dockerfile: Dockerfile
+      container_name: frontend_jkr
+      volumes:
+        # Source code directory:
+        - type: bind
+          source: ./frontend/jrkrr_app
+          target: /app/frontend
+        - type: bind
+          source: ./frontend/jkrr_app/node_modules
+          target: /app/frontend/node_modules
+      ports:
+        - "3000:3000"
+      environment:
+        - WATCHPACK_POLLING=true
+        - NODE_ENV=development
+        - CHOKIDAR_USEPOLLING=true
+      depends_on:
+        - backend
+      # command: npm start
+
