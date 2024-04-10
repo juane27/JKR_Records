@@ -15,13 +15,13 @@ Nos va a devolver a nuestra consola, una consola dentro del contenedor de softwa
 
 Una vez dentro ejecutamos el comando:
 
-**$** `cd /opt/back_end/marvel` 
+**$** `cd /...ubicacion de la app` 
 
 ### 3. Iniciar el servidor
 (Siempre dentro de nuestro contenedor de software - Comando N°2)  
 Tenemos que ir a la carpeta donde se encuentra el archivo *manage.py*  
 
-**$** `python manage.py runserver 0.0.0.0:8000`  
+**$** `python manage.py runserver 0.0.0.0:8000` 
 
 ### 4. Ejecutar los siguientes comandos para realizar la primera migración:  
 

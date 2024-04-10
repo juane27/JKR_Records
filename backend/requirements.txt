@@ -10,3 +10,4 @@ psycopg2-binary>=2.8
 # Toolkit que permite aprovechar al máximo el uso interactivo de Python.
 # Muy útil cuando utilizemos el shell de Django.
 ipython==8.8.0
+django-cors-headers

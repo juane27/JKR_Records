@@ -15,7 +15,7 @@ services:
       - 5432:5432
 
   adminer:
-    container_name: jrkrecords_adminer
+    container_name: jkrrecords_adminer
     image: adminer:4.8.0
     restart: always
     ports:
@@ -47,10 +47,10 @@ services:
       volumes:
         # Source code directory:
         - type: bind
-          source: ./frontend/jrkrr_app
+          source: ./frontend
           target: /app/frontend
         - type: bind
-          source: ./frontend/jkrr_app/node_modules
+          source: ./frontend/node_modules
           target: /app/frontend/node_modules
       ports:
         - "3000:3000"
@@ -60,5 +60,6 @@ services:
         - CHOKIDAR_USEPOLLING=true
       depends_on:
         - backend
+      stdin_open: true
       # command: npm start
 

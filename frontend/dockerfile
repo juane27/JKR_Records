@@ -3,10 +3,10 @@ FROM node:20
 
 WORKDIR /app/frontend
 
-# Install dependencies
-# COPY package.json yarn.lock /app/
+#Install dependencies
+COPY package.json yarn.lock* /app/frontend/
 
-# RUN npm install
+RUN npm install
 
 # Add rest of the client code
 COPY . /app/frontend
