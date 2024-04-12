@@ -3,6 +3,7 @@ from django.shortcuts import render
 from rest_framework.response import Response
 
 from rest_framework.decorators import api_view
+from django.http import JsonResponse
 
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
@@ -11,6 +12,11 @@ from rest_framework.views import APIView
 
 from .models import Artists, Songs, Producers, Releases, Lives, TeamMembers
 from .serializers import ArtistsSerializer, SongsSerializer, ProducersSerializer, ReleasesSerializer, LivesSerializer, TeamMembersSerializer
+from django.http import HttpResponse
+from pytube import YouTube
+import spotipy
+import pandas as pd
+from spotipy.oauth2 import SpotifyClientCredentials
 
 
 
@@ -70,3 +76,37 @@ class ArtistOnlyView(APIView):
             return Response({"message": "No tienes permiso para acceder a esta vista."})
 
 
+
+
+###OBTENER VISTAS YOUTUBE###
+##LINK VIDEO: "https://www.youtube.com/watch?v=vyQy2-FN8u8&ab_channel=ClubSpace"
+##VIDEO ID: vyQy2-FN8u8&
+def video_info(request, video_id):
+    video_url = f"https://www.youtube.com/watch?v={video_id}"
+    yt = YouTube(video_url)
+    return HttpResponse(f"Views: {yt.views}")
+
+
+
+
+
+
+def song_info(request):
+    # Configurar Spotipy
+    client_id = 'eeecef1084e542ac908348dbdc41b004'
+
+    client_secret = 'def75379305446bbac98640c6df1dd7c'
+    client_credentials_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
+    sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager) 
+
+    # Obtener información de la canción
+    track_id = 'spotify:track:6ipvBFh31dO2MyKKiACSQD'  # Ejemplo con "Never Gonna Give You Up" de Rick Astley
+    track = sp.track(track_id)
+    features = sp.audio_features(track_id)[0] if sp.audio_features(track_id) else None
+
+    # Construir una respuesta HTTP
+    response_data = {
+        'track': track,
+        'features': features
+    }
+    return JsonResponse(response_data)

@@ -9,6 +9,7 @@ import {
 
 import Header from './components/Header'
 import SongsListPage from './pages/SongsListPage'
+import SongsInfoPage from './pages/SongsInfoPage';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
           <Routes>
           
             <Route path="/" element={<SongsListPage />} />        
-     
+            <Route path="/song/" element={<SongsInfoPage />} /> {/* Agrega esta línea */}
+
             
          
           </Routes>

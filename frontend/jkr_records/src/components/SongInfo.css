@@ -1,0 +1,38 @@
+.song-details {
+    background-color: #111; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 15px; /* Reducir el espacio interior */
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Dos columnas iguales */
+    gap: 10px; /* Espacio entre elementos */
+    font-family: 'Roboto', sans-serif; /* Fuente moderna */
+    max-width: auto; /* Ancho máximo de la tarjeta */
+    margin: 0 auto; /* Centrar la tarjeta horizontalmente */
+  }
+  
+  .song-details h1 {
+    font-size: 24px; /* Tamaño de fuente grande para el título */
+    margin-bottom: 10px;
+    grid-column: 1 / span 2; /* Ocupa ambas columnas */
+  }
+  
+  .song-details p {
+    font-size: 16px; /* Tamaño de fuente para otros elementos de texto */
+    margin-bottom: 5px;
+  }
+  
+  .album-cover {
+    grid-column: 1 / span 2; /* Ocupar ambas columnas */
+    grid-row: 3; /* Colocar en la tercera fila */
+  }
+  
+  .album-cover img {
+    max-width: 100%; /* Hacer que la imagen ocupe todo el ancho de su contenedor */
+    max-height: 200px; /* Altura máxima de la imagen */
+    width: auto; /* Permitir que la anchura se ajuste automáticamente */
+    height: auto; /* Permitir que la altura se ajuste automáticamente */
+    border-radius: 5px; /* Bordes redondeados para la imagen del álbum */
+  }
+  
