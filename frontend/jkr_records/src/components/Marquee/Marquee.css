@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+.marquee-container{
+    cursor: pointer;
+    background: black;
+    height: 80px;
+    padding-top: 1em;
+    padding-bottom: 3.5em;
+}
+.marquee-container span {
+    color:black;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    font-size: 40px;
+    font-weight: bold;
+    font-weight: 700;
+    font-family: "Oswald", sans-serif;
+    cursor: pointer;
+    letter-spacing: 10px;
+    text-transform:uppercase;
+    margin-bottom: 1em;
+    
+  }
+
+
+/* Estilo para el segundo marquee */
+.marquee-container:nth-child(2) span {
+    color: white; /* Cambia a tu color deseado */
+}

@@ -1,0 +1,121 @@
+.container-artists {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 9em;
+    padding-top: 5em;
+}
+
+.container-artists h1{
+    color:black;
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 8em;
+    -webkit-text-stroke: 3px #880316;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+}
+.container-artists h1:hover{
+    color:#880316;
+}
+
+.container-artists h3{
+    color:white;
+}
+
+.container-artists p{
+    color: white
+}
+
+
+.artist-list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em 2em;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    transition: transform 0.6s ease-in-out;
+
+}
+
+.artist-list:hover {
+    transform: scale(1.01); /* Agrandar el ítem un 5% */
+    transition: transform 0.6s ease-in-out; /* Hacer la transición suave */
+}
+
+.card-artist{
+    
+    width: 30vw;
+    padding-top: 30vw;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5%;
+   
+    background-size: cover;
+}
+
+.card-artist:hover{
+    opacity: 100%;
+
+}
+
+.card-artist:hover h3{
+    opacity: 100%;
+    font-size: 4vw;
+    transition: opacity 0.5s ease;
+    text-shadow: 5px 5px #880316
+
+
+
+}
+
+.artist-image{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.artist-name{
+    display: flex;
+    place-content: center;
+}
+
+.card-artist h3{
+    z-index: 100;
+    position: absolute;
+    color: white;
+    font-size: 4vw;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0%;
+    top: 9%;
+    
+    
+}
+
+@media  screen and  (max-width: 842px) {
+    .container-artists {
+        padding-top: 8em;
+    }
+
+    .container-artists h1{
+        font-size: 6em;
+    }
+
+    .artist-list{
+
+    grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card-artist {
+        width: 75vw;
+        padding-top: 75vw;
+    }
+
+    
+    
+
+}

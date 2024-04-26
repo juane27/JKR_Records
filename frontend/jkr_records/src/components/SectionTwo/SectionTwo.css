@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+.container-playlists {  
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  
+    /* grid-template-rows: 0.5fr 0.5fr; */
+    gap: 1em 2em;  
+  
+    /* grid-auto-flow: row;
+    grid-template-areas:
+      "artist1 artist2 artist3 artist4"
+      "artist5 artist6 artist7 artist8"; */ 
+  }
+
+.container-plsts{
+    background: beige;
+    height: auto;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+.container-plsts h1 {
+    color:#880316;
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 8em;
+}
+
+.playlist{
+    padding: 2em;
+    width: 100%;
+}
+
+.playlist-embedded{
+        border-radius: '12px';
+        
+        width:80%;
+        height:500px;
+}
+
+@media screen and (max-width:1200px){
+.container-playlists {  
+       
+    grid-template-columns: repeat(2, 1fr);
+}
+
+}
+
+
+
+
+@media screen and (max-width:862px){
+
+    .container-playlists {  
+       
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+    .playlist-embedded{
+        border-radius: '12px';
+        
+        width:100%;
+        height:50vh;
+}
+
+}

@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+.container-footer{
+    background: black;
+    color: white;
+    text-align: center;
+    padding-top: 3em;
+    padding-bottom: 2em;
+}
+
+.logo-f{
+    width: 5em;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    column-gap: 1.4em;
+    font-size: 2em;
+    margin-top: 1em;
+    padding-bottom: 1em;
+    cursor: pointer;
+}
+
+.redes a{
+    color: white;
+    text-decoration: none;
+}
+
+.redes i:hover{
+    color:rgb(136 3 22)
+
+
+}
+
+
+
+
+.copy-container{
+    padding: 1em;
+    
+    font-family: "Oswald", sans-serif;
+}

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.container-about {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5em;
+}
+.container-abt{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.container-about h1{
+    color:black;
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 8em;
+    -webkit-text-stroke: 3px #880316;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+}
+
+.container-about h1:hover{
+    color:#880316;
+}
+
+
+.container-about p{
+    color:white;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 20px;
+    width: 50%;
+    max-width: 50%;
+    
+}
+
+.about-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3em;
+    margin-top: 3em;
+}
+.about-img img{
+
+    border-radius: 2%;
+  
+    width: 80%; /* Hacer que la imagen ocupe todo el ancho disponible */
+    max-width: 80%; /* Establecer un ancho máximo */
+    height: auto; /* Mantener la proporción de aspecto */
+}
+
+.text-abt{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+
+@media  screen and  (max-width: 842px) {
+    .container-about {
+        padding-top: 8em;
+    }
+
+    .container-about h1{
+        font-size: 6em;
+    }
+
+
+    .container-about p{
+        width: 80%;
+        max-width: 80%;
+        
+    }
+  }

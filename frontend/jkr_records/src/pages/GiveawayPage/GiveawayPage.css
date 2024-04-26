@@ -1,0 +1,75 @@
+
+
+
+.container-giveaway{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 9em;
+    padding-top: 5em;
+}
+
+
+.container-giveaway h1{
+    color:black;
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 8em;
+    -webkit-text-stroke: 3px #880316;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+}
+
+
+.container-giveaway h1:hover{
+    color:#880316;
+}
+
+.container-giveaway h3{
+    color: beige;
+    text-transform: uppercase;
+}
+
+.container-grid-giveaway{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em 2em;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    transition: transform 0.6s ease-in-out;
+    
+
+}
+
+.container-condiciones{
+    width: 75vw;
+}
+
+
+.ranking-table {
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: black;
+    width: 35vw;
+  }
+
+.table-hover>tbody>tr>td, 
+.table-hover>tbody>tr>th,
+.table-hover>tbody>thead {
+   background-color: #000;
+   border: 1px solid #880316;
+   color: white;
+ }
+
+ .table-hover tbody tr:hover td {
+    background: rgb(6, 6, 6);
+}
+
+ .table-hover>thead>tr>th {
+    background-color: #000;
+    border: 1px solid #880316;
+    color: white;
+ }

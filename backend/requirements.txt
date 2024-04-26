@@ -11,3 +11,8 @@ psycopg2-binary>=2.8
 # Muy útil cuando utilizemos el shell de Django.
 ipython==8.8.0
 django-cors-headers
+pytube
+spotipy
+beautifulsoup4
+requests
+pandas

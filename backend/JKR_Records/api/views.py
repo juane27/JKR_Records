@@ -17,6 +17,10 @@ from pytube import YouTube
 import spotipy
 import pandas as pd
 from spotipy.oauth2 import SpotifyClientCredentials
+from bs4 import BeautifulSoup as bs
+import requests
+from rest_framework import status
+
 
 
 
@@ -27,6 +31,17 @@ def getArtists(request):
     artists = Artists.objects.all()
     serializer = ArtistsSerializer(artists, many=True) #many es por si son muchos
     return Response(serializer.data)
+
+
+@api_view(['GET'])
+def getArtist_by_id(request, artist_id):
+    try:
+        artist = Artists.objects.get(id=artist_id)
+        serializer = ArtistsSerializer(artist)
+        return Response(serializer.data)
+    except Artists.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
 
 
 @api_view(['GET'])
@@ -42,6 +57,14 @@ def getProducers(request):
     serializer = ProducersSerializer(producers, many=True) #many es por si son muchos
     return Response(serializer.data)
 
+@api_view(['GET'])
+def getProducer_by_id(request, producer_id):
+    try:
+        producer = Producers.objects.get(id=producer_id)
+        serializer = ProducersSerializer(producer)
+        return Response(serializer.data)
+    except Producers.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
 
 @api_view(['GET'])
 def getReleases(request):
@@ -110,3 +133,37 @@ def song_info(request):
         'features': features
     }
     return JsonResponse(response_data)
+
+
+#6ipvBFh31dO2MyKKiACSQD
+
+def spotify_plays(request, spotify_id):
+    spotify_url = f"https://open.spotify.com/track/{spotify_id}"
+    url = spotify_url
+
+    # Valor predeterminado para playcount en caso de cualquier error
+    playcount = 'No disponible'
+
+    # Hacemos una petición a la página
+    response = requests.get(url)
+
+    # Verifica que la petición fue exitosa
+    if response.status_code == 200:
+        # Creamos el objeto BeautifulSoup
+        soup = bs(response.text, 'html.parser')
+        
+        # Buscamos el elemento por el atributo 'data-testid'
+        playcount_span = soup.find('span', attrs={'data-testid': 'playcount'})
+        
+        # Extraemos el texto
+        if playcount_span:
+            playcount = playcount_span.text
+            print("Número de reproducciones:", playcount)
+        else:
+            print("Elemento no encontrado")
+            playcount = 'No encontrado'
+    else:
+        print("Error en la petición", response.status_code)
+        playcount = 'Error en la petición'
+
+    return HttpResponse(f"Reproducciones: {playcount}")

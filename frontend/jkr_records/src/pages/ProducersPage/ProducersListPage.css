@@ -1,0 +1,156 @@
+.container-artists {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 9em;
+    padding-top: 5em;
+}
+
+.container-artists h1{
+    color:black;
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 8em;
+    -webkit-text-stroke: 3px #880316;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+}
+
+.container-artists h1:hover{
+    color:#880316;
+}
+.container-artists h3{
+    color:white;
+}
+
+.container-artists p{
+    color: white
+}
+
+
+.artist-list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em 2em;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+
+}
+
+@keyframes golden-border {
+    from {
+        box-shadow: #7f6d04 0px 0px 8px 3px;
+    }
+    to {
+        box-shadow: #7f6d0400 0px 0px 0px 0px;
+    }
+  }
+
+.card-producer{
+    
+    width: 30vw;
+    padding-top: 30vw;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5%;
+    background-size: cover;
+    box-shadow: #7f6d04 0px 0px 8px 3px;
+    animation: golden-border 2s cubic-bezier(0.4, 0, 1, 1) infinite;
+    
+}
+
+.card-producer:hover{
+    opacity: 100%;
+
+}
+
+.card-producer:hover h3{
+    opacity: 100%;
+    font-size: 4vw;
+    transition: opacity 0.5s ease;
+    text-shadow: 5px 5px #880316
+
+
+}
+
+.artist-image{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.artist-name{
+    display: flex;
+    place-content: center;
+}
+
+.card-producer h3{
+    z-index: 100;
+    position: absolute;
+    color: white;
+    font-size: 4vw;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0%;
+    top: 9%;
+    
+}
+
+
+
+@keyframes rotate-disc {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+.golden-disc{
+    background-image: url('../../assets/disco1.png');
+    position: absolute;
+    bottom: 11px;
+    background-size: cover;
+    width: 6em;
+    height: 6em;
+    /* font-size: 42px; */
+    text-align: right;
+    z-index: 70;
+    right: 27px;
+    transition: transform 0.5s ease-in-out;
+    animation: rotate-disc 2s linear infinite;
+}
+
+.golden-disc:hover{
+    width: 6.1em;
+    height: 6.1em;
+    transition: ease-in-out 0.2s;
+}
+
+
+@media  screen and  (max-width: 842px) {
+    .container-artists {
+        padding-top: 8em;
+    }
+
+
+    .container-artists h1{
+        font-size: 6em;
+    }
+
+    .artist-list{
+
+    grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card-producer {
+        width: 75vw;
+        padding-top: 75vw;
+    }
+
+}

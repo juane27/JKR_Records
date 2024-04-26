@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import SongInfo from '../components/SongInfo';
+import SongInfo from '../components/SongInfo/SongInfo';
 
 const SongsInfoPage = () => {
 

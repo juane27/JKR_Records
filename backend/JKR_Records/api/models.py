@@ -38,7 +38,7 @@ class Songs(models.Model):
 class Producers(models.Model):
     nombre = models.CharField(max_length=200, unique=True)
     descripcion = models.TextField()
-    foto = models.URLField()
+    foto = models.CharField(max_length=200, unique=True)
     spotify = models.URLField(blank=True, null=True)
     applemusic = models.URLField(blank=True, null=True)
     youtube = models.URLField(blank=True, null=True)

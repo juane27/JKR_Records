@@ -1,6 +1,26 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+
+
+
+}
+#root{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: black;
+  
+
+}
 .App {
   text-align: center;
+  background-color: black;
 }
+
+
 
 .App-logo {
   height: 40vmin;

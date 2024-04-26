@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+.contact-container{
+    background: black;
+    width: 100%;
+    padding-top: 5em;
+    padding-bottom: 10em;
+}
+
+.contact-container .row{
+    --bs-gutter-x: 0rem !important;
+}
+
+.contact-form{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2em 2em;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    transition: transform 0.6s ease-in-out;
+}
+
+.contact__form{
+    width: 70%;
+    text-align: -webkit-center;
+}
+
+.contact-container h1{
+    color:black;
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 8em;
+    -webkit-text-stroke: 3px #880316;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+}
+.contact-container h1:hover{
+    color:#880316;
+}
+
+.ac_btn{
+    background: #880316;
+    width: 8em;
+    color: black;
+    padding-bottom: 6px;
+    text-align: center;
+    padding-top: 6px;
+    font-family: 'Bebas Neue';
+}
+.form-control.autofilled {
+    background-color: black; /* Cambiar a tu color deseado */
+  }
+input#name.form-control {
+    background-color: black !important;
+   
+}
+input#name.form-control{
+    background-color: black; /* Cambiar a tu color deseado */
+    color: beige;
+    width: 25vw;
+}
+
+input#email.form-control{
+    background-color: black; /* Cambiar a tu color deseado */
+    color: beige;
+    width: 25vw;
+}
+input#message.form-control{
+    background-color: black; /* Cambiar a tu color deseado */
+    color: beige;
+    width: 25vw;
+    
+}
+
+#message{
+    resize: none;
+    width: 25vw;
+}
+  
+
+.ac_btn:hover{
+    background: #b00922;
+    color: white;
+    border: 1px solid white;
+}
+
+.ac_btn:active,
+.ac_btn:focus-visible{
+    background: black;
+    color: #880316 !important;
+    border: 1px solid #880316 !important;
+}
+
+
+.sec_sp{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.form-control:focus{
+    border-color: #880316;
+    box-shadow: 0 0 0 .25rem rgba(111, 8, 17, 0.259);
+}
+#name{
+    background-color: black;
+    margin-bottom: 2em;
+    border: none;
+    border-bottom: 1px solid #880316;
+    width: 30%;
+    
+}
+
+#name::placeholder{
+    background-color: black;
+    color: #880316;
+}
+
+
+
+#email{
+    background-color: black;
+    margin-bottom: 2em;
+    border: none;
+    border-bottom: 1px solid #880316;
+    width: 30%;
+    
+}
+
+#email::placeholder{
+    background-color: black;
+    color: #880316;
+}
+
+.form-control:focus {
+    border-color: #880316;
+    box-shadow: 0px 4px 0 0.03rem rgba(111, 8, 17, 0.259);
+}
+
+#message{
+    background-color: black;
+    border: none;
+    border-bottom: 1px solid #880316;
+    width: 25vw;
+    color:beige;
+    
+}
+
+#message::placeholder{
+    background-color: black;
+    color: #880316;
+}
+
+.form-group{
+    text-align: -webkit-center;
+}
+
+
+@media  screen and  (max-width: 842px) {
+    .contact-container {
+        padding-top: 8em;
+    }
+
+    #name,#email,#message{
+        width: 75vw;
+        
+    }
+
+    input#name.form-control{
+        width: 75vw;
+    }
+
+    input#email.form-control{
+        width: 75vw;
+    }
+
+    .contact-container h1 {
+
+        font-size: 6em;
+
+    }
+    
+
+}
