@@ -1,0 +1,85 @@
+.container.auth__container h1{
+    color:black;
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 8em;
+    -webkit-text-stroke: 3px #880316;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+
+}
+.container{
+    padding-top: 5em;
+    padding-bottom: 10em;
+}
+.container.auth__container h1:hover{
+    color:#880316;
+}
+
+.container-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth__form{
+    width: 70%;
+    text-align: -webkit-center;
+}
+
+.auth__form input{
+    color:#880316;
+    background-color: black;
+    background-color: black;
+    margin-bottom: 2em;
+    border: none;
+    border-bottom: 1px solid #880316;
+    width: 60%;
+}
+
+.auth__form input::placeholder{
+    color:#880316;
+    background-color: black;
+}
+
+.form-control:focus{
+    background-color: black;
+    border-color: #880316;
+    box-shadow: 0 0 0 .25rem rgba(111, 8, 17, 0.259);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+
+}
+
+.ac_btn{
+    background: #880316;
+    width: 8em;
+    color: black;
+    padding-bottom: 6px;
+    text-align: center;
+    padding-top: 6px;
+    font-family: 'Bebas Neue';
+}
+
+.ac_btn:hover{
+    background: #b00922;
+    color: white;
+    border: 1px solid white;
+}
+
+.ac_btn:active,
+.ac_btn:focus-visible{
+    background: black;
+    color: #880316 !important;
+    border: 1px solid #880316 !important;
+}

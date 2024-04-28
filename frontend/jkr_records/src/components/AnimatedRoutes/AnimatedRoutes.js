@@ -23,6 +23,11 @@ import VideoLanding from '../VideoLanding/VideoLanding';
 import ArtistsListPage from '../../pages/ArtistsPage/AritstsListPage';
 import { AnimatePresence } from "framer-motion"
 import GiveawayPage from '../../pages/GiveawayPage/GiveawayPage';
+import RegisterPage from '../../pages/RegisterPage/RegisterPage';
+import LoginPage from '../../pages/LoginPage/LoginPage';
+import ActivatePage from '../../pages/ActivatePage/ActivatePage';
+import ResetPasswordPage from '../../pages/ResetPasswordPage/ResetPasswordPage';
+import ResetPasswordConfirmPage from '../../pages/ResetPasswordConfirmPage/ResetPasswordConfirmPage';
 
 function AnimatedRoutes() {
     const location = useLocation();
@@ -55,6 +60,12 @@ function AnimatedRoutes() {
 
     <Route path="/producer/:id" element={<ProducerPage />} /> {/* Nueva ruta para la página del artista */}
     <Route path="/giveaway" element={<GiveawayPage />} /> {/* Nueva ruta para la página del artista */}
+    <Route path="/register" element={<RegisterPage /> } /> {/* Nueva ruta para la página del artista */}
+    <Route path="/login" element={<LoginPage />} /> {/* Nueva ruta para la página del artista */}
+    <Route path="/activate/:uid/:token" element={<ActivatePage />} />
+    <Route path="/reset-password" element={<ResetPasswordPage />} />
+    <Route path="/password/reset/confirm/:uid/:token" element={<ResetPasswordConfirmPage />} />
+
 
     
  

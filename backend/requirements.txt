@@ -16,3 +16,8 @@ spotipy
 beautifulsoup4
 requests
 pandas
+djoser
+djangorestframework-simplejwt
+pyjwt
+
+django-environ
