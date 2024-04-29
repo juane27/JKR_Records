@@ -17,6 +17,7 @@ export default function ContactUs() {
     >
       <div className="contact-container">
             <h1 className="display-4 mb-4">CONTACT US</h1>
+            <h2 className="h2contact">Envíanos un correo a contacto@jkrrecords.net si quieres contactarnos.</h2>
          
         <div className="contact-form">
 

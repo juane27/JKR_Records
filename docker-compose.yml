@@ -6,7 +6,7 @@ services:
     container_name: JKR_records_database
     restart: always
     volumes:
-      - ./database:/var/lib/postgresql/data
+      - /run/desktop/mnt/host/c/Users/Juane/Desktop/294/JKR_Records/database:/var/lib/postgresql/data
     environment:
       POSTGRES_DB: jkr_records_db
       POSTGRES_USER: jkr_records
