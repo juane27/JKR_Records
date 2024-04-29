@@ -148,7 +148,10 @@ ALLOWED_HOSTS = [
     "127.0.0.1", 
     "localhost",
     "backend",
-	"140.99.164.197"
+     "140.99.164.197",
+    "www.jkrrecords.net",
+    "jkrrecords.net"
+		
 
 ]
 
@@ -161,6 +164,8 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://frontend:3000",
     "http://140.99.164.197:3001/",
+    "http://jkrrecords.net:3001",
+    "http://www.jkrrecords.net:3001",
 ]
 CORS_ALLOW_CREDENTIALS = False
 
