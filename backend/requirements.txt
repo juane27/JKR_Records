@@ -16,3 +16,5 @@ spotipy
 beautifulsoup4
 requests
 pandas
+gunicorn==20.1.0
+whitenoise

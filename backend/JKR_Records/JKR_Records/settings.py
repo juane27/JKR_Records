@@ -11,9 +11,17 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+from whitenoise.middleware import WhiteNoiseMiddleware
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_DIRS = [
+	os.path.join(BASE_DIR, "static")
+]
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 # Quick-start development settings - unsuitable for production
@@ -38,7 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'api.apps.ApiConfig',
-    'rest_framework',
+   'rest_framework',
+    
     "corsheaders",
 ]
 
@@ -51,6 +60,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+
 ]
 
 ROOT_URLCONF = 'JKR_Records.urls'
@@ -136,13 +147,25 @@ CORS_ORIGIN_ALLOW_ALL = True
 ALLOWED_HOSTS = [
     "127.0.0.1", 
     "localhost",
-    "backend"
+    "backend",
+     "140.99.164.197",
+    "www.jkrrecords.net",
+    "jkrrecords.net"
+		
+
 ]
 
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3001", 
     "http://localhost:3001",
-    "http://frontend:3001"
+    "http://frontend:3001",
+    "http://140.99.164.197:3001",
+        "http://127.0.0.1:3000", 
+    "http://localhost:3000",
+    "http://frontend:3000",
+    "http://140.99.164.197:3001/",
+    "http://jkrrecords.net:3001",
+    "http://www.jkrrecords.net:3001",
 ]
 CORS_ALLOW_CREDENTIALS = False
 

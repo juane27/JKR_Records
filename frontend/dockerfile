@@ -8,10 +8,20 @@ COPY package.json yarn.lock* /app/frontend/
 
 RUN npm install
 
-# Add rest of the client code
-COPY . /app/frontend
+#LOCAL
+# COPY . /app/frontend
+
+# PRODUCCION
+COPY . .
+
+# # Change directory to the React app directory
+WORKDIR /app/frontend/jkr_records
+
+# #Build the React App for production
+RUN npm run build 
+
 
 EXPOSE 3001
 
-# CMD npm start
+CMD npm start
 

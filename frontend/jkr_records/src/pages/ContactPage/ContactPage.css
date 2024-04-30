@@ -39,7 +39,11 @@
 .contact-container h1:hover{
     color:#880316;
 }
-
+.h2contact{
+    text-align: center;
+    font-size: 1em;
+    color: white;
+}
 .ac_btn{
     background: #880316;
     width: 8em;
