@@ -6,7 +6,8 @@ import Typewriter from "./TypeWriter";
 const SectionOne = () => {
   return (
     <div className='container-section'>
-      <h1 className='title'>Nacimiento de una pasión por la música</h1>
+      <div className='container-s1'>
+      <h1 className='title'>Pasión por la música</h1>
       <div className='text'>
         <p>
           
@@ -21,6 +22,7 @@ const SectionOne = () => {
           <br />
           - <strong>Enfoque en la carrera del artista:</strong> Nos convertimos en aliados estratégicos de nuestros artistas, guiándolos en la toma de decisiones y apoyándolos en cada etapa de su carrera.
         </p>
+      </div>
       </div>
     </div>
   );

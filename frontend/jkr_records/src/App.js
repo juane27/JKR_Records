@@ -25,11 +25,14 @@ import BodyAbout from './components/BodyAbout/BodyAbout';
 import ContactUs from './pages/ContactPage/ContactPage';  
 import AnimatedCursor from "react-animated-cursor"
 import AnimatedRoutes from './components/AnimatedRoutes/AnimatedRoutes';
+import { ToastContainer } from 'react-toastify';
+
 
 
 function App() {
 
   return (
+    <>
     <Router>
       <div className="container-dark">
         <div className="app">
@@ -55,6 +58,9 @@ function App() {
         <Footer />
       </div>
     </Router>
+    <ToastContainer />
+    </>
+
   );
 }
 

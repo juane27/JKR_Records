@@ -18,3 +18,7 @@ requests
 pandas
 gunicorn==20.1.0
 whitenoise
+djoser
+djangorestframework-simplejwt
+pyjwt
+django-environ

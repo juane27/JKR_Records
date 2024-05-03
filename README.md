@@ -49,4 +49,6 @@ Tenemos que estar en la carpeta que contiene el archivo *docker-compose.yml* y h
 
 
 
-#
+#PRODUCCION
+Revisar dockerfiles de frontend y backend descomentar lineas de produccion comentar locales
+Revisar dockercompose.yml y habilitar nginx

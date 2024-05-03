@@ -10,6 +10,9 @@
     padding-bottom: 7em;
     padding-top: 7em;
 }
+.container-s1{
+    width: 70vw;
+}
 
 .text p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -29,7 +32,7 @@
 
 .text{
     display: flex;
-    width: 70%;
+    width: 70vw;
     padding-left: 1em;
     padding-right: 1em;
     text-align: center;

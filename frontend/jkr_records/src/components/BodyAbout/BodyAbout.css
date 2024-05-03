@@ -64,6 +64,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    width: 77vw;
+    text-align: center;
  
 }
 .text-abt h2{

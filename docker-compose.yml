@@ -6,7 +6,7 @@ services:
     container_name: JKR_records_database
     restart: always
     volumes:
-      - /run/desktop/mnt/host/c/Users/Juane/Desktop/294/JKR_Records/database:/var/lib/postgresql/data
+      - ./database:/var/lib/postgresql/data
     environment:
       POSTGRES_DB: jkr_records_db
       POSTGRES_USER: jkr_records
@@ -44,7 +44,8 @@ services:
           source: ./frontend/node_modules
           target: /app/frontend/node_modules
       ports:
-        - "3001:3000"
+        - "3000:3000"
+        #3001 el primero en produccion
       environment:
         - WATCHPACK_POLLING=true
         - NODE_ENV=development
@@ -54,16 +55,16 @@ services:
       stdin_open: true
       # command: npm start
 
-  nginx:
-      image: nginx:latest
-      container_name: nginx_jkr
-      build: .
-      restart: always
-      ports:
-        - "80:80"
-      volumes:
-        - ./nginx.conf:/nginx.conf:ro
-      depends_on:
-        - backend
-        - frontend
+  # nginx:
+  #     image: nginx:latest
+  #     container_name: nginx_jkr
+  #     build: .
+  #     restart: always
+  #     ports:
+  #       - "80:80"
+  #     volumes:
+  #       - ./nginx.conf:/nginx.conf:ro
+  #     depends_on:
+  #       - backend
+  #       - frontend
 

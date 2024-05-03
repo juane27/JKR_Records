@@ -1,0 +1,18 @@
+.ac_btn{
+    background: #880316;
+    width: 8em;
+    color: black;
+    padding-bottom: 6px;
+    text-align: center;
+    padding-top: 6px;
+    font-family: 'Bebas Neue';
+}
+
+.container-activation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: -webkit-center;
+    padding-bottom: 6em;
+}

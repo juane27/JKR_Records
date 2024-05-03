@@ -85,31 +85,31 @@ class TeamMembers(models.Model):
         return self.nombre[0:50]
 
 
-class CustomUser(AbstractUser):
-    # Define un campo para el rol del usuario
-    is_artist = models.BooleanField(default=False)
+# class CustomUser(AbstractUser):
+#     # Define un campo para el rol del usuario
+#     is_artist = models.BooleanField(default=False)
     
-    # Añade el argumento related_name a los campos
-    groups = models.ManyToManyField(
-        Group,
-        verbose_name=_('groups'),
-        blank=True,
-        help_text=_(
-            'The groups this user belongs to. A user will get all permissions '
-            'granted to each of their groups.'
-        ),
-        related_name='custom_user_set',  # Cambia 'custom_user_set' por el nombre que prefieras
-        related_query_name='user',
-    )
+#     # Añade el argumento related_name a los campos
+#     groups = models.ManyToManyField(
+#         Group,
+#         verbose_name=_('groups'),
+#         blank=True,
+#         help_text=_(
+#             'The groups this user belongs to. A user will get all permissions '
+#             'granted to each of their groups.'
+#         ),
+#         related_name='custom_user_set',  # Cambia 'custom_user_set' por el nombre que prefieras
+#         related_query_name='user',
+#     )
 
-    user_permissions = models.ManyToManyField(
-        Permission,
-        verbose_name=_('user permissions'),
-        blank=True,
-        help_text=_('Specific permissions for this user.'),
-        related_name='custom_user_set',  # Cambia 'custom_user_set' por el nombre que prefieras
-        related_query_name='user',
-    )
+#     user_permissions = models.ManyToManyField(
+#         Permission,
+#         verbose_name=_('user permissions'),
+#         blank=True,
+#         help_text=_('Specific permissions for this user.'),
+#         related_name='custom_user_set',  # Cambia 'custom_user_set' por el nombre que prefieras
+#         related_query_name='user',
+#     )
 
 
 
