@@ -12,16 +12,16 @@ RUN npm install
 # COPY . /app/frontend
 
 # PRODUCCION#
-# COPY . .
+COPY . .
 
-# # Change directory to the React app directory
-# WORKDIR /app/frontend/jkr_records
+# Change directory to the React app directory
+WORKDIR /app/frontend/jkr_records
 
-# #Build the React App for production
-# RUN npm run build 
-#ACA termina PRODUCCION#
+#Build the React App for production
+RUN npm run build 
+# ACA termina PRODUCCION#
 
 EXPOSE 3001
 
-# CMD npm start
+CMD npm start
 
