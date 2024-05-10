@@ -54,16 +54,16 @@ services:
       stdin_open: true
       # command: npm start
 
-  nginx:
-      image: nginx:latest
-      container_name: nginx_jkr
-      build: .
-      restart: always
-      ports:
-        - "80:80"
-      volumes:
-        - ./nginx.conf:/nginx.conf:ro
-      depends_on:
-        - backend
-        - frontend
+  # nginx:
+  #     image: nginx:latest
+  #     container_name: nginx_jkr
+  #     build: .
+  #     restart: always
+  #     ports:
+  #       - "80:80"
+  #     volumes:
+  #       - ./nginx.conf:/nginx.conf:ro
+  #     depends_on:
+  #       - backend
+  #       - frontend
 
